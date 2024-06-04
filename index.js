@@ -27,7 +27,7 @@ const students = [
 ]
 
 app.set("view engine" , "ejs");
-//app.set("views" , path.resolve('./views'))
+app.set("views" , path.resolve('./views'))
 
 app.get('/students',(req,res) => {
     res.render("students" , {
