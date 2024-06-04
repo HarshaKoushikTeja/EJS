@@ -10,17 +10,17 @@ const students = [
         branch : "CSE"
     },
     {
-        id : 1,
+        id : 2,
         name : "Vinay Teja",
         branch : "ECE"
     },
     {
-        id : 1,
+        id : 3,
         name : "Varsha Karne",
         branch : "CIV"
     },
     {
-        id : 1,
+        id : 4,
         name : "Bindu Amulya",
         branch : "MECH"
     },
@@ -40,9 +40,15 @@ app.get('/students/:id' , (req,res) => {
 
     const student = students.find(std => std.id === id);
 
+    student ? 
+
     res.render("student",{
         student : student
     })
+
+    :
+
+    res.render("ErrorPage")
 })
 
 app.listen(8000, ()=>{
